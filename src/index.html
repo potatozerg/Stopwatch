@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stopwatch</title>
+    <base href="/" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="controllers.js"></script>
+
+  </head>
+  <body ng-app="mainApp" ng-controller="mainCtrl">
+
+    <div id="content">
+      <p id="watch">{{elapsedTime | mstohhmmssxx}}</p>
+      <button type="button" class="btn btn-primary" ng-click="start()">Start</button>
+      <button type="button" class="btn btn-warning" ng-click="stop()">Stop</button>
+      <button type="button" class="btn btn-danger" ng-click="reset()">Reset</button>
+    </div>
+  </body>
+</html>
